@@ -36,7 +36,7 @@ public class Controller implements Initializable {
     /**
      *
      */
-    private static ExecutorService executor = new ThreadPoolExecutor(1, 1,
+    public static ExecutorService executor = new ThreadPoolExecutor(1, 1,
             0L, TimeUnit.MILLISECONDS,
             new LinkedBlockingQueue<>(1024), new ThreadPoolExecutor.AbortPolicy());
 

@@ -126,9 +126,9 @@ public class Word implements Comparable<Word> {
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("[")
+        stringBuilder.append("[ ")
                 .append(this.value)
-                .append("] ")
+                .append(" ] ")
                 .append(this.frequency)
                 .append(" 次");
         return stringBuilder.toString();

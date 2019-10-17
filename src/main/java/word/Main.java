@@ -16,6 +16,13 @@ public class Main extends Application {
         primaryStage.show();
     }
 
+    @Override
+    public void stop() throws Exception {
+        if(Controller.executor!=null){
+            Controller.executor.shutdown();
+        }
+    }
+
 
     public static void main(String[] args) {
         launch(args);
