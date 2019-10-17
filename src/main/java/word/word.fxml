@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="385.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="word.Controller">
+    <children>
+        <Label layoutX="28.0" layoutY="29.0" text="文件/网址：">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+
+        <JFXTextField fx:id="url" alignment="CENTER" focusColor="DEEPSKYBLUE" layoutX="120.0" layoutY="24.0" prefHeight="30.0" prefWidth="534.0" />
+
+        <JFXButton fx:id="submit" layoutX="524.0" layoutY="69.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="59.0" style="-fx-background-color: #DBDBDB;" text="提交" />
+        <JFXButton fx:id="cancel" layoutX="592.0" layoutY="69.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="63.0" style="-fx-background-color: #DBDBDB;" text="重置" />
+
+        <Separator layoutX="28.0" layoutY="107.0" prefHeight="0.0" prefWidth="624.0" />
+
+        <JFXTextArea fx:id="result" layoutX="28.0" layoutY="126.0" prefHeight="207.0" prefWidth="624.0" text="">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </JFXTextArea>
+    </children>
+</AnchorPane>
