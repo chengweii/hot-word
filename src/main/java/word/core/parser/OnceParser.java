@@ -48,14 +48,22 @@ public class OnceParser extends Parser {
 
     @Override
     void filter() {
+        filterInner(300, 0.5);
+    }
+
+    private void filterInner(int mi, double entropy) {
         for (Map.Entry<String, Word> entry : this.dict.entrySet()) {
             Word word = entry.getValue();
             word.setMi(mi(word));
             word.setEntropy(entropy(word));
             // 筛选条件
-            if (word.getMi() > 300 && word.getEntropy() >= 0.5) {
+            if (word.getMi() > mi && word.getEntropy() >= entropy) {
                 this.candidates.add(word);
             }
+        }
+
+        if (this.candidates.size() <= 0) {
+            filterInner(mi - 10 > 0 ? mi - 10 : 0, entropy - 0.1 > 0 ? entropy - 0.1 : 0);
         }
     }
 
